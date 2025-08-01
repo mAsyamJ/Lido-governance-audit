@@ -1,0 +1,28 @@
+node_modules/
+.env
+coverage-report/
+.DS_Store
+
+# Hardhat files
+cache/
+artifacts/
+
+# Foundry: compiler files
+cache_forge/
+out/
+
+# Foundry: development broadcast logs
+/broadcast
+.vscode/
+
+# Kontrol files
+/kout
+
+# Deploy configs
+deploy-config/*
+!deploy-config/deploy-config-holesky.toml
+!deploy-config/deploy-config-mainnet.toml
+!deploy-config/deploy-config-hoodi.toml
+
+# Permissions transition output
+/scripts/permissions-transition/transition-plans/*.md
