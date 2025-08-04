@@ -91,7 +91,7 @@ contract EmergencyProtectedTimelock is ITimelock {
     /// @param proposalId The ID of the proposal to be executed.
     function execute(uint256 proposalId) external {
         _emergencyProtection.checkEmergencyMode({isActive: false});
-        _proposals.execute(proposalId, _timelockState.getAfterScheduleDelay());
+        _proposalId, _timelockState.getAfterScheduleDelay());
     }
 
     /// @dev Cancels all non-executed proposals.
@@ -161,7 +161,7 @@ contract EmergencyProtectedTimelock is ITimelock {
     function emergencyExecute(uint256 proposalId) external {
         _emergencyProtection.checkEmergencyMode({isActive: true});
         _emergencyProtection.checkCallerIsEmergencyExecutionCommittee();
-        _proposals.execute({proposalId: proposalId, afterScheduleDelay: Duration.wrap(0)});
+        _{proposalId: proposalId, afterScheduleDelay: Duration.wrap(0)});
     }
 
     /// @dev Deactivates the emergency mode.
