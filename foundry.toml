@@ -4,6 +4,9 @@ src = 'contracts'
 out = 'out'
 script = 'scripts'
 libs = ['node_modules', 'lib']
+remappings = [
+  'openzeppelin/=lib/openzeppelin-contracts/',
+]
 test = 'test'
 cache_path = 'cache_forge'
 # solc-version = "0.8.26"
